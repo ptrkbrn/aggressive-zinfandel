@@ -14,7 +14,7 @@ html,body,.App
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding-bottom: 7rem;
+  padding-bottom: 5rem;
 
 }
 
@@ -46,6 +46,12 @@ header {
 	width: 200em;
  	animation: fade-in 4s ease-in forwards;
 }
+
+@-moz-document url-prefix() {
+	.header-text {
+	  margin-left: 6rem;
+	}
+  }
 
 .header-text h1 {
 	font-size: 8rem;
@@ -87,28 +93,21 @@ svg {
   	overflow: visible;
 }
 
-.st0 {
-  /* fill:none;
-  stroke:#FFFFFF;
-  stroke-width:10;
-  stroke-miterlimit:10; */
-}
-
-.start-btn {
+.App .start-btn {
+	margin-top: 3rem;
 	animation: fade-in 6s ease-in forwards;
 }
 
 .btn{
-	/* display:inline-block; */
 	padding:0.35rem 1.2rem;
 	border:0.1rem solid #2885ff;
-	margin:0 0.3rem 0.3rem 0;
+	margin: 1rem;
 	border-radius:0.12rem;
 	box-sizing: border-box;
 	text-decoration:none;
 	font-family:'Roboto',sans-serif;
 	font-weight:300;
-	font-size: .8rem;
+	font-size: 1rem;
 	color:#2885ff;
 	background-color: black;
 	text-align:center;
@@ -136,10 +135,12 @@ a {
 
 .titleCard div {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 50vw;
-	height: 37.5vw;
+	box-sizing: border-box;
+	width: 80vw;
+	height: 60vw;
 	padding-left: 2em;
 	padding-right: 2em;
 	color: white;
@@ -148,16 +149,12 @@ a {
 	font-weight: 100;
 	letter-spacing: .1em;
 	word-spacing: .15em;
-	font-size: 2vw;
+	font-size: 3vw;
 	text-transform: uppercase;
 	text-align: center;
 	line-height: 1.8em;
 	user-select: none;
 	overflow: hidden;
-}
-
-.titleCard:focus, input:focus{
-/*    outline: none;*/
 }
 
 @media all and (max-width:30em){
@@ -168,6 +165,11 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
+	.titleCard div {
+		max-width: 50vw;
+		max-height: 37.5vw;
+		font-size: 2vw;
+	}
 	img {
 		max-width: 50vw;
 		max-height: 37.5vw;

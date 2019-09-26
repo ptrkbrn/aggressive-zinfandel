@@ -7,23 +7,23 @@ const SubmitButton = (props) => (
 class TitleCard extends React.Component {
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
-  handleChange(e) {
-    this.props.onChange(e.target.innerText);
+  handleSelect() {
+    this.props.onSelect();
   }
 
-  handleSubmit() {
-    this.props.onSubmit();
+  handleSubmit(e) {
+    this.props.onSubmit(e);
   }
 
   render() {
     return (
       <>
         <div className="titleCard" id="titleCard">
-          <div id="img-target" onChange={this.handleChange} dangerouslySetInnerHTML={{__html: this.props.cardContent}} contentEditable></div>
+          <div id="img-target" spellCheck="false" onClick={this.handleSelect} contentEditable>{this.props.cardContent}</div>
         </div>
         <SubmitButton onSubmit={this.handleSubmit} />
       </>

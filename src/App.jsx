@@ -1,8 +1,33 @@
 import React from 'react';
+import 'normalize.css';
 import './App.css';
 import htmlToImage from 'html-to-image';
 import TitleCard from './Titlecard';
-import intro from './intro.mp3';
+import intro1 from './sounds/intro1.mp3';
+import intro2 from './sounds/intro2.mp3';
+import intro3 from './sounds/intro3.mp3';
+import intro4 from './sounds/intro4.mp3';
+import intro5 from './sounds/intro5.mp3';
+
+const intros = [intro1, intro2, intro3, intro4, intro5];
+
+const titleCards = [
+  'WHERE\'S A GRINDSTONE WHEN YOU NEED ONE?',
+  'DON JUAN IN HELL',
+  'OF MICE AND WOLFMEN',
+  'BONE APPÉTIT',
+  'LONG NIGHT\'S JOURNEY INTO DAY',
+  <>
+    <span>IT&apos;S NOT YOU, IT&apos;S ME. . .</span>
+    <span>NO, IT&apos;S YOU</span>
+  </>,
+  'SHIP OF FOOLS',
+  <>
+    <span>PROFESSOR CRANE&apos;S</span>
+    <span>SELF DELUSION 101</span>
+  </>,
+  'ONCE UPON A TIME FRASIER, ROZ, GIL, BULLDOG, AND TOOTY WENT TO THE BLACK TOWER. . .',
+];
 
 function Skyline() {
   return (
@@ -47,16 +72,24 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      intro: '',
       showTitleCard: false,
       showStartButton: true,
       showControls: false,
-      cardContent: 'ONCE UPON A TIME FRASIER, ROZ, GIL, BULLDOG, AND TOOTY WENT TO THE BLACK TOWER. . .',
+      cardContent: '',
       imgSource: '',
     };
     this.handleButtonClick = this.handleButtonClick.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleReset = this.handleReset.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      intro: intros[Math.floor(Math.random() * intros.length)],
+      cardContent: titleCards[Math.floor(Math.random() * titleCards.length)],
+    });
   }
 
   handleButtonClick() {
@@ -67,21 +100,21 @@ class App extends React.Component {
     document.querySelector('header').classList.add('header-shrunk');
   }
 
-  handleChange(input) {
+  handleSelect() {
     this.setState({
-      cardContent: input,
+      cardContent: '',
     });
-    console.log(this.state.cardContent);
+    console.log(this.state.cardContent)
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     const titleCard = document.getElementById('img-target');
     htmlToImage.toJpeg(titleCard)
       .then((dataUrl) => {
         const img = new Image();
         img.src = dataUrl;
         this.setState({ imgSource: img.src });
-        console.log(this.state.imgSource);
         document.querySelector('#generatedCard').appendChild(img);
       })
       .catch((error) => {
@@ -99,6 +132,7 @@ class App extends React.Component {
     this.setState({
       showControls: !this.state.showControls,
       showTitleCard: !this.state.showTitleCard,
+      cardContent: titleCards[Math.floor(Math.random() * titleCards.length)],
     });
     const img = document.querySelector('img');
     img.remove();
@@ -107,11 +141,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div>
-          <audio autoPlay id="intro">
-            <source src={intro} />
-          </audio>
-        </div>
+        <audio autoPlay id="intro" src={this.state.intro}><track kind="captions" /></audio>
         <Skyline />
         {this.state.showStartButton
           ? <a className="btn start-btn" href="#titleCard" onClick={this.handleButtonClick}>Let's get better!</a>
@@ -120,7 +150,7 @@ class App extends React.Component {
           ? (
             <TitleCard
               cardContent={this.state.cardContent}
-              onChange={this.handleChange}
+              onSelect={this.handleSelect}
               onSubmit={this.handleSubmit}
             />
           )
