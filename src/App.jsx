@@ -165,7 +165,7 @@ class App extends React.Component {
         { showControls
           ? (
             <div>
-              <a className="btn" href={imgSource} download>Save</a>
+              <a className="btn" href={imgSource} download={Math.floor(Math.random() * 10000)}>Save</a>
               <button type="button" className="btn" onClick={this.handleReset}>Make another</button>
             </div>
           )
