@@ -93,9 +93,10 @@ class App extends React.Component {
   }
 
   handleButtonClick() {
+    const { showTitleCard, showStartButton } = this.state;
     this.setState({
-      showTitleCard: !this.state.showTitleCard,
-      showStartButton: !this.state.showStartButton,
+      showTitleCard: !showTitleCard,
+      showStartButton: !showStartButton,
     });
     document.querySelector('header').classList.add('header-shrunk');
   }
@@ -104,7 +105,6 @@ class App extends React.Component {
     this.setState({
       cardContent: '',
     });
-    console.log(this.state.cardContent)
   }
 
   handleSubmit(e) {
@@ -121,17 +121,19 @@ class App extends React.Component {
         console.error('oops, something went wrong!', error);
       });
     setTimeout(() => {
+      const { showTitleCard, showControls } = this.state;
       this.setState({
-        showTitleCard: !this.state.showTitleCard,
-        showControls: !this.state.showControls,
+        showTitleCard: !showTitleCard,
+        showControls: !showControls,
       });
     }, 500);
   }
 
   handleReset() {
+    const { showControls, showTitleCard } = this.state;
     this.setState({
-      showControls: !this.state.showControls,
-      showTitleCard: !this.state.showTitleCard,
+      showControls: !showControls,
+      showTitleCard: !showTitleCard,
       cardContent: titleCards[Math.floor(Math.random() * titleCards.length)],
     });
     const img = document.querySelector('img');
@@ -139,27 +141,31 @@ class App extends React.Component {
   }
 
   render() {
+    const {
+      intro, showTitleCard, showStartButton, showControls, cardContent, imgSource,
+    } = this.state;
+
     return (
       <div className="App">
-        <audio autoPlay id="intro" src={this.state.intro}><track kind="captions" /></audio>
+        <audio autoPlay id="intro" src={intro}><track kind="captions" /></audio>
         <Skyline />
-        {this.state.showStartButton
-          ? <a className="btn start-btn" href="#titleCard" onClick={this.handleButtonClick}>Let's get better!</a>
+        {showStartButton
+          ? <a className="btn start-btn" href="#titleCard" onClick={this.handleButtonClick}>Let&apos;s get better!</a>
           : null}
-        { this.state.showTitleCard
+        { showTitleCard
           ? (
             <TitleCard
-              cardContent={this.state.cardContent}
+              cardContent={cardContent}
               onSelect={this.handleSelect}
               onSubmit={this.handleSubmit}
             />
           )
           : null}
         <div id="generatedCard" />
-        { this.state.showControls
+        { showControls
           ? (
             <div>
-              <a className="btn" href={this.state.imgSource} download>Save</a>
+              <a className="btn" href={imgSource} download>Save</a>
               <button type="button" className="btn" onClick={this.handleReset}>Make another</button>
             </div>
           )

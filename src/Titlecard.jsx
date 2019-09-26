@@ -1,8 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const SubmitButton = (props) => (
-  <button type="submit" className="btn" onClick={props.onSubmit}>Generate</button>
+const SubmitButton = ({ onSubmit }) => (
+  <button type="submit" className="btn" onClick={onSubmit}>Generate</button>
 );
+
+SubmitButton.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 class TitleCard extends React.Component {
   constructor(props) {
@@ -12,11 +17,13 @@ class TitleCard extends React.Component {
   }
 
   handleSelect() {
-    this.props.onSelect();
+    const { onSelect } = this.props;
+    onSelect();
   }
 
   handleSubmit(e) {
-    this.props.onSubmit(e);
+    const { onSubmit } = this.props;
+    onSubmit(e);
   }
 
   render() {
@@ -30,5 +37,10 @@ class TitleCard extends React.Component {
     );
   }
 }
+
+TitleCard.propTypes = {
+  onSelect: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default TitleCard;
