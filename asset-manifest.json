@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/aggressive-zinfandel/static/css/main.6bca2775.chunk.css",
+    "main.js": "/aggressive-zinfandel/static/js/main.040c0278.chunk.js",
+    "main.js.map": "/aggressive-zinfandel/static/js/main.040c0278.chunk.js.map",
+    "runtime-main.js": "/aggressive-zinfandel/static/js/runtime-main.195a1faa.js",
+    "runtime-main.js.map": "/aggressive-zinfandel/static/js/runtime-main.195a1faa.js.map",
+    "static/css/2.764ccc25.chunk.css": "/aggressive-zinfandel/static/css/2.764ccc25.chunk.css",
+    "static/js/2.51a65aa1.chunk.js": "/aggressive-zinfandel/static/js/2.51a65aa1.chunk.js",
+    "static/js/2.51a65aa1.chunk.js.map": "/aggressive-zinfandel/static/js/2.51a65aa1.chunk.js.map",
+    "index.html": "/aggressive-zinfandel/index.html",
+    "precache-manifest.a5416da42f86dad3be5b1bfda1dfbe67.js": "/aggressive-zinfandel/precache-manifest.a5416da42f86dad3be5b1bfda1dfbe67.js",
+    "service-worker.js": "/aggressive-zinfandel/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/aggressive-zinfandel/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.6bca2775.chunk.css.map": "/aggressive-zinfandel/static/css/main.6bca2775.chunk.css.map",
+    "static/media/intro1.mp3": "/aggressive-zinfandel/static/media/intro1.d3d1e589.mp3",
+    "static/media/intro2.mp3": "/aggressive-zinfandel/static/media/intro2.e3fc4462.mp3",
+    "static/media/intro3.mp3": "/aggressive-zinfandel/static/media/intro3.80e36ee8.mp3",
+    "static/media/intro4.mp3": "/aggressive-zinfandel/static/media/intro4.027248ae.mp3",
+    "static/media/intro5.mp3": "/aggressive-zinfandel/static/media/intro5.881c465d.mp3"
+  }
+}
