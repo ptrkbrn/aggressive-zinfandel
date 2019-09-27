@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4764e12ff130f36f054af7c15e4599a6",
+    "revision": "d500ef29e86fb37bd62eeb3e37bfd603",
     "url": "/aggressive-zinfandel/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aggressive-zinfandel/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "32fc0a92d059da98ce69",
+    "revision": "823284f7ecbf4dc19641",
     "url": "/aggressive-zinfandel/static/css/main.6bca2775.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aggressive-zinfandel/static/js/2.51a65aa1.chunk.js"
   },
   {
-    "revision": "32fc0a92d059da98ce69",
-    "url": "/aggressive-zinfandel/static/js/main.040c0278.chunk.js"
+    "revision": "823284f7ecbf4dc19641",
+    "url": "/aggressive-zinfandel/static/js/main.2703ea62.chunk.js"
   },
   {
     "revision": "4b2d65ccbd01446b6eac",
