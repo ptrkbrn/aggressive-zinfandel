@@ -103,7 +103,7 @@ class App extends React.Component {
 
   handleSelect() {
     this.setState({
-      cardContent: '',
+      cardContent: <br />,
     });
   }
 
