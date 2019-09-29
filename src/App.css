@@ -102,11 +102,11 @@ svg {
 	padding:0.35rem 1.2rem;
 	border:0.1rem solid #2885ff;
 	margin: 1rem;
-	border-radius:0.12rem;
+	border-radius:0.15rem;
 	box-sizing: border-box;
 	text-decoration:none;
 	font-family:'Roboto',sans-serif;
-	font-weight:300;
+	font-weight:400;
 	font-size: 1rem;
 	color:#2885ff;
 	background-color: black;
@@ -147,8 +147,6 @@ a {
 	background-color: black;
 	font-family: 'korinna', serif;
 	font-weight: 100;
-	letter-spacing: .1em;
-	word-spacing: .15em;
 	font-size: 3vw;
 	text-transform: uppercase;
 	text-align: center;
