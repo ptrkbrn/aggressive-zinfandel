@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/aggressive-zinfandel/precache-manifest.1757db77225fd4dcf20e1df0ff217768.js"
+  "/aggressive-zinfandel/precache-manifest.4f1188c11838a3173a29a856a324e8e5.js"
 );
 
 self.addEventListener('message', (event) => {
