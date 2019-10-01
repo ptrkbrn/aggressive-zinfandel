@@ -8,6 +8,18 @@ html,body,.App
 	scroll-behavior: smooth;
 }
 
+* {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+input,
+textarea,
+[contenteditable] {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
 .App {
   /* text-align: center; */
   display: flex;
@@ -151,7 +163,6 @@ a {
 	text-transform: uppercase;
 	text-align: center;
 	line-height: 1.8em;
-	user-select: none;
 	overflow: hidden;
 }
 
