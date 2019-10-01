@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "82cc7f1078b57d192cc6b7ab1e683805",
+    "revision": "22976fe8344f938b39564633995e3aed",
     "url": "/aggressive-zinfandel/index.html"
   },
   {
