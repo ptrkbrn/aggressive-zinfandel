@@ -168,15 +168,15 @@ a {
 
 @font-face {
 	font-family: "Korinna";
-	src: url("/fonts/korinna/korinna_regular-webfont.woff2") format("woff2"),
-		 url("/fonts/korinna/korinna_regular-webfont.woff") format("woff");
+	src: url("./fonts/korinna/korinna_regular-webfont.woff2") format("woff2"),
+		 url("./fonts/korinna/korinna_regular-webfont.woff") format("woff"),
+		 url("./fonts/korinna/korinna_regular-webfont.ttf") format("truetype");
   }
 
   @font-face {
 	font-family: "Florentine";
-	src: url("/fonts/florentine/florentine_regular-webfont.woff2") format("woff2"),
-		 url("/fonts/florentine/florentine_regular-webfont.woff") format("woff"),
-		 url("/fonts/florentine/florentine_regular-webfont.ttf") format("truetype");
+	src: url("./fonts/florentine/florentine_regular-webfont.woff2") format("woff2"),
+		 url("./fonts/florentine/florentine_regular-webfont.woff") format("woff"),
   }
 
 @media all and (max-width:30em){
