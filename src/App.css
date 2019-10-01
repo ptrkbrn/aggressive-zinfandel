@@ -175,7 +175,8 @@ a {
   @font-face {
 	font-family: "Florentine";
 	src: url("/fonts/florentine/florentine_regular-webfont.woff2") format("woff2"),
-		 url("/fonts/florentine/florentine_regular-webfont.woff") format("woff");
+		 url("/fonts/florentine/florentine_regular-webfont.woff") format("woff"),
+		 url("/fonts/florentine/florentine_regular-webfont.ttf") format("truetype");
   }
 
 @media all and (max-width:30em){
