@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "40306e9aaadabccc9ecb4853f2104ad9",
+    "revision": "a17678cf2b53d9ac0707987046636e9b",
     "url": "/aggressive-zinfandel/index.html"
   },
   {
-    "revision": "dad5564d9b6a1ed1327e",
+    "revision": "99b970b79b1837b5ba63",
     "url": "/aggressive-zinfandel/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "4c495a46c8ba1186b141",
+    "revision": "ca0b5e5f5e0dd696e894",
     "url": "/aggressive-zinfandel/static/css/main.7dec567f.chunk.css"
   },
   {
-    "revision": "dad5564d9b6a1ed1327e",
-    "url": "/aggressive-zinfandel/static/js/2.51a65aa1.chunk.js"
+    "revision": "99b970b79b1837b5ba63",
+    "url": "/aggressive-zinfandel/static/js/2.423f34d5.chunk.js"
   },
   {
-    "revision": "4c495a46c8ba1186b141",
-    "url": "/aggressive-zinfandel/static/js/main.2703ea62.chunk.js"
+    "revision": "ce028d5e2b0507b0fb507336501c1edf",
+    "url": "/aggressive-zinfandel/static/js/2.423f34d5.chunk.js.LICENSE"
   },
   {
-    "revision": "4b2d65ccbd01446b6eac",
-    "url": "/aggressive-zinfandel/static/js/runtime-main.195a1faa.js"
+    "revision": "ca0b5e5f5e0dd696e894",
+    "url": "/aggressive-zinfandel/static/js/main.50e68212.chunk.js"
+  },
+  {
+    "revision": "0edcbb72702f065eda37",
+    "url": "/aggressive-zinfandel/static/js/runtime-main.1a20cf21.js"
   },
   {
     "revision": "0bcb387830283774b8cd23accd55b6a9",
