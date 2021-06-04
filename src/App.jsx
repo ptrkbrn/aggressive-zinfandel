@@ -133,6 +133,9 @@ class App extends React.Component {
             </div>
           )
           : null}
+          <footer>
+            <span>Created by <a href="http://www.ptrkbrn.com">pat breen</a>.</span>
+          </footer>
       </div>
     );
   }

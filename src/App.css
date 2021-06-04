@@ -166,6 +166,22 @@ a {
 	overflow: hidden;
 }
 
+footer {
+	width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    font-size: .75em;
+    background-color: black;
+	animation: fade-in 6s ease-in forwards;
+}
+
+footer a {
+	font-size: 1em;
+    text-decoration: underline;
+}
+
 @font-face {
 	font-family: "Korinna";
 	src: url("./fonts/korinna/korinna_regular-webfont.woff2") format("woff2"),
